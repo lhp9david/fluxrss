@@ -1,0 +1,67 @@
+form#connexion {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    padding: 40px;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0,0,0,.6);
+    border: #1b66ca 1px solid;
+    border-radius: 10px;
+  }
+
+  form#connexion .labels {
+    position: relative;
+  }
+  
+  form#connexion .labels input {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    margin-bottom: 25px;
+    border: none;
+    border-bottom: 1px solid #1b66ca;
+    outline: none;
+    padding-bottom: 0;
+    padding-top: 20px;
+  }
+  form#connexion .labels label {
+    position: absolute;
+    top:0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 16px;
+    pointer-events: none;
+    transition: .5s;
+    font-weight: bolder;
+  }
+  
+ form#connexion .labels input:focus ~ label,
+ form#connexion .labels input:valid ~ label {
+    top: -20px;
+    left: 0;
+    font-size: 12px;
+  }
+
+#submit {
+    margin : 1rem 0;
+    width : 10vw;
+    height: 2.3em;
+    border: #1b66ca 1px solid;
+    border-radius: 5px;
+    font-weight: bolder;
+    color: #1b66ca;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.1em;
+    align-self: center;
+    transition: .5s;
+}
+
+#submit:hover {
+    background-color: #1b66ca;
+    color: white;
+}

@@ -1,0 +1,225 @@
+body {
+    height: 100vh;
+    background-color: #333;
+    color: #f5f5f5;
+}
+
+.carousel img {
+    height: 10em;
+    width: 100%;
+    object-fit: cover;
+    filter: brightness(0.7);
+}
+nav {
+    border-top: 1px solid white;
+}
+nav img {
+    height: 1.5em;
+    cursor: pointer;
+    filter: brightness(0.7);
+}
+.navbar-toggler {
+   background-color: white;
+}
+.actus{
+    height: auto;
+    border-left: 5px solid red;
+    background-color: #444;
+    color: #f5f5f5;
+   
+}
+.culture {
+    height: auto;
+    border-left: 5px solid green;
+    background-color: #444;
+    color: #f5f5f5;
+}
+.sport {
+    height: auto;
+    border-left: 5px solid orange;
+    background-color: #444;
+    color: #f5f5f5;
+}
+.pixels {
+    height: auto;
+    border-left: 5px solid blueviolet;
+    background-color: #444;
+    color: #f5f5f5;
+}
+.economie {
+    height: auto;
+    border-left: 5px solid blue;
+    background-color: #444;
+    color: #f5f5f5;
+}
+
+.actus-title {
+border: 2px solid red;
+}
+.culture-title {
+    border:2px solid green;
+}
+.sport-title {
+    border: 2px solid orange;
+}
+.pixels-title {
+    border: 2px solid blueviolet;
+}
+.economie-title {
+    border: 2px solid blue;
+}
+.actus-img img {
+    width: 100%;
+    height: auto;
+    filter: brightness(0.7);
+}
+.actus-img {
+    margin: auto;
+    padding: 0;
+}
+.btn-actualites {
+    background-color: red;
+    border: none;
+}
+.btn-culture {
+    background-color: green;
+    border: none;
+}
+.btn-sport {
+    background-color: orange;
+    border: none;
+}
+.btn-pixels {
+    background-color: blueviolet;
+    border: none;
+}
+.btn-economie {
+    background-color: blue;
+    border: none;
+}
+.btn-other {
+    background-color: purple;
+    border: none;
+}
+
+.btn-actualites:hover{
+    background-color: #cecbcb;
+    color: red;
+}
+.btn-culture:hover{
+    background-color: #cecbcb;
+    color: green;
+}
+.btn-sport:hover{
+    background-color: #cecbcb;
+    color: orange;
+}
+.btn-pixels:hover{
+    background-color: #cecbcb;
+    color: blueviolet;
+}
+.btn-economie:hover{
+    background-color: #cecbcb;
+    color: blue;
+}
+.btn-other:hover{
+    background-color: #cecbcb;
+    color: purple;
+}
+
+.actus-article {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.modalink-economie {
+    color: white;
+    text-decoration: none;
+}
+
+.modalink-culture {
+    color: white;
+    text-decoration: none;
+}
+.modalink-sport {
+    color: white;
+    text-decoration: none;
+}
+.modalink-pixels {
+    color: white;
+    text-decoration: none;
+}
+.modalink-actualites {
+    color: white;
+    text-decoration: none;
+}
+.modalink-other {
+    color: white;
+    text-decoration: none;
+}
+
+
+
+
+.arrow {
+    height: 2em;
+    width: 2em;
+    cursor: pointer;
+    filter: brightness(0.7);
+}
+
+footer {
+    height: 2em;
+    background-color: #333;
+    color: #f5f5f5;
+    text-align: center;
+}
+
+.date {
+    font-size: 0.8em;
+    color: #f5f5f5;
+}
+
+.title {
+    font-size: 1em;
+    color: #f5f5f5;
+    text-decoration: none;
+}
+
+.title:hover {
+    text-decoration: underline;
+    color: #f5f5f5;
+}
+
+.linkCarousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    min-height: 5em;
+    background-color: #000;
+    text-align: center;
+}
+
+.linkCarousel1,
+.linkCarousel2,
+.linkCarousel3 {
+    display: block;
+    text-decoration: none;
+    color: #f5f5f5;
+}
+
+@media (min-width: 1024px) {
+    .carousel img {
+        height: auto;
+        margin: auto;
+        display: block;
+    }
+    .carousel {
+       width: 50%;
+       margin: auto;  
+       background-color: #000;
+      }
+}

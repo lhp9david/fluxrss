@@ -1,0 +1,264 @@
+body {
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+
+}
+
+.carousel img {
+    height: auto;
+    width: 100%;
+    object-fit: cover;
+}
+
+
+
+
+nav img {
+    height: 1.5em;
+    cursor: pointer;
+}
+
+.actus {
+    height: auto;
+    border-left: 5px solid red;
+    background-color: #f5f5f5;
+
+}
+
+.culture {
+    height: auto;
+    border-left: 5px solid green;
+    background-color: #f5f5f5;
+}
+
+.sport {
+    height: auto;
+    border-left: 5px solid orange;
+    background-color: #f5f5f5;
+}
+
+.pixels {
+    height: auto;
+    border-left: 5px solid blueviolet;
+    background-color: #f5f5f5;
+}
+
+.economie {
+    height: auto;
+    border-left: 5px solid blue;
+    background-color: #f5f5f5;
+}
+
+.actus-img {
+    margin: auto;
+    padding: 0;
+}
+
+.actus-article {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.actus-img img {
+    width: 100%;
+    height: auto;
+
+}
+
+.btn-actualites {
+    background-color: red;
+    border: none;
+    color: #f5f5f5;
+}
+
+.btn-culture {
+    background-color: green;
+    border: none;
+    color: #f5f5f5;
+}
+
+.btn-sport {
+    background-color: orange;
+    border: none;
+    color: #f5f5f5;
+}
+
+.btn-pixels {
+    background-color: blueviolet;
+    border: none;
+    color: #f5f5f5;
+}
+
+.btn-economie {
+    background-color: blue;
+    border: none;
+    color: #f5f5f5;
+}
+
+.btn-other {
+    background-color: purple;
+    border: none;
+    color: #f5f5f5;
+}
+
+.btn-actualites:hover {
+    background-color: #cecbcb;
+    color: red;
+    transition: .5s;
+}
+
+.btn-culture:hover {
+    background-color: #cecbcb;
+    color: green;
+    transition: .5s;
+}
+
+.btn-sport:hover {
+    background-color: #cecbcb;
+    color: orange;
+    transition: .5s;
+}
+
+.btn-pixels:hover {
+    background-color: #cecbcb;
+    color: blueviolet;
+    transition: .5s;
+}
+
+.btn-economie:hover {
+    background-color: #cecbcb;
+    color: blue;
+    transition: .5s;
+}
+
+.btn-other:hover {
+    background-color: #cecbcb;
+    color: purple;
+    transition: .5s;
+}
+
+.modalink-actualites {
+    color: #f5f5f5;
+    text-decoration: none;
+}
+
+.modalink-actualites:hover {
+    color: red;
+}
+
+.modalink-culture {
+    color: #f5f5f5;
+    text-decoration: none;
+}
+
+.modalink-culture:hover {
+    color: green;
+}
+
+.modalink-sport {
+    color: #f5f5f5;
+    text-decoration: none;
+}
+
+.modalink-sport:hover {
+    color: orange;
+}
+
+.modalink-pixels {
+    color: #f5f5f5;
+    text-decoration: none;
+}
+
+.modalink-pixels:hover {
+    color: blueviolet;
+
+}
+
+.modalink-economie {
+    color: #f5f5f5;
+    text-decoration: none;
+}
+
+.modalink-economie:hover {
+    color: blue;
+}
+
+.modalink-other {
+    color: white;
+    text-decoration: none;
+}
+
+.modalink-other:hover {
+    color: purple;
+    text-decoration: none;
+}
+
+.arrow {
+    height: 2em;
+    width: 2em;
+    cursor: pointer;
+}
+
+
+footer {
+    height: 2em;
+    background-color: #f5f5f5;
+    color: #000;
+    text-align: center;
+}
+
+.date {
+    font-size: 0.8em;
+    color: #000;
+}
+
+.title {
+    font-size: 1em;
+    color: #000;
+    text-decoration: none;
+}
+
+.title:hover {
+    text-decoration: underline;
+}
+
+.linkCarousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    min-height: 5em;
+    background-color: #000;
+    text-align: center;
+}
+
+.linkCarousel1,
+.linkCarousel2,
+.linkCarousel3 {
+    display: block;
+    text-decoration: none;
+    color: #f5f5f5;
+    background-color: #000;
+    text-align: center;
+}
+
+
+
+
+
+@media (min-width: 1024px) {
+    .carousel img {
+        height: auto;
+        margin: auto;
+        display: block;
+    }
+
+    .carousel {
+        width: 50%;
+        margin: auto;
+        background-color: #000;
+    }
+}

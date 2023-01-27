@@ -1,0 +1,10 @@
+RewriteEngine on
+RewriteRule  "login" "controllers/login-controller.php"
+RewriteRule  "accueil" "controllers/home-controller.php"
+RewriteRule  "actualites" "controllers/pages-controller.php?actualites"
+RewriteRule  "economie" "controllers/pages-controller.php?economie"
+RewriteRule  "culture" "controllers/pages-controller.php?culture"
+RewriteRule  "sport" "controllers/pages-controller.php?sport"
+RewriteRule  "pixels" "controllers/pages-controller.php?pixels"
+RewriteRule  "parametres" "controllers/parameters-controller.php"
+ErrorDocument 404 /404.php
