@@ -58,11 +58,20 @@ function rss_reader($rss_feed) // Fonction qui prend en paramètre l'URL du flux
             $i++;
 
             if ($rss->channel->link == 'https://www.lemonde.fr/rss/une.xml') {
-                preg_match('/media:content url="(.*)" width/', $item->asXML(), $matches);
-                $photo_url = $matches[1];
+                //recuperer les images du flux rss
+
+
+                $media = $item->children('http://search.yahoo.com/mrss/'); // Namespace pour les éléments media
+
+                if ($media->content) {
+                    $photo_url = '';
+                    foreach ($media->content->attributes() as $key => $value) {
+                        if ($key == 'url') {
+                            $photo_url = (string) $value;
+                        }}}
                 $originalDate = $item->pubDate;
                 $newDate = date('d/m/Y H:i', strtotime($originalDate));
-
+                
                 echo '
             <div class="container mx-auto">
             <div class="row actus my-2 mx-0">
@@ -101,8 +110,14 @@ function rss_reader($rss_feed) // Fonction qui prend en paramètre l'URL du flux
 </div>
         ';
             } elseif ($rss->channel->link == 'https://www.lemonde.fr/culture/rss_full.xml') {
-                preg_match('/media:content url="(.*)" width/', $item->asXML(), $matches);
-                $photo_url = $matches[1];
+                $media = $item->children('http://search.yahoo.com/mrss/'); // Namespace pour les éléments media
+
+                if ($media->content) {
+                    $photo_url = '';
+                    foreach ($media->content->attributes() as $key => $value) {
+                        if ($key == 'url') {
+                            $photo_url = (string) $value;
+                        }}}
                 $originalDate = $item->pubDate;
                 $newDate = date('d/m/Y H:i', strtotime($originalDate));
                 echo '
@@ -143,8 +158,14 @@ function rss_reader($rss_feed) // Fonction qui prend en paramètre l'URL du flux
 </div>
                 ';
             } elseif ($rss->channel->link == 'https://www.lemonde.fr/pixels/rss_full.xml') {
-                preg_match('/media:content url="(.*)" width/', $item->asXML(), $matches);
-                $photo_url = $matches[1];
+                $media = $item->children('http://search.yahoo.com/mrss/'); // Namespace pour les éléments media
+
+                if ($media->content) {
+                    $photo_url = '';
+                    foreach ($media->content->attributes() as $key => $value) {
+                        if ($key == 'url') {
+                            $photo_url = (string) $value;
+                        }}}
                 $originalDate = $item->pubDate;
                 $newDate = date('d/m/Y H:i', strtotime($originalDate));
                 echo '
@@ -185,8 +206,14 @@ function rss_reader($rss_feed) // Fonction qui prend en paramètre l'URL du flux
 </div>
             ';
             } elseif ($rss->channel->link == 'https://www.lemonde.fr/economie/rss_full.xml') {
-                preg_match('/media:content url="(.*)" width/', $item->asXML(), $matches);
-                $photo_url = $matches[1];
+                $media = $item->children('http://search.yahoo.com/mrss/'); // Namespace pour les éléments media
+
+                if ($media->content) {
+                    $photo_url = '';
+                    foreach ($media->content->attributes() as $key => $value) {
+                        if ($key == 'url') {
+                            $photo_url = (string) $value;
+                        }}}
                 $originalDate = $item->pubDate;
                 $newDate = date('d/m/Y H:i', strtotime($originalDate));
                 echo '
@@ -227,8 +254,14 @@ function rss_reader($rss_feed) // Fonction qui prend en paramètre l'URL du flux
 </div>
             ';
             } elseif ($rss->channel->link == 'https://www.lemonde.fr/sport/rss_full.xml') {
-                preg_match('/media:content url="(.*)" width/', $item->asXML(), $matches);
-                $photo_url = $matches[1];
+                $media = $item->children('http://search.yahoo.com/mrss/'); // Namespace pour les éléments media
+
+                if ($media->content) {
+                    $photo_url = '';
+                    foreach ($media->content->attributes() as $key => $value) {
+                        if ($key == 'url') {
+                            $photo_url = (string) $value;
+                        }}}
                 $originalDate = $item->pubDate;
                 $newDate = date('d/m/Y H:i', strtotime($originalDate));
 
@@ -319,6 +352,7 @@ function displayhome($param)
         $maxarticle = 6;
     }
 
+
     $flux1 = [
         'actualites' => 'https://www.lemonde.fr/rss/une.xml'
     ];
@@ -362,8 +396,14 @@ function displayhome($param)
 
             $originalDate = $item->pubDate;
             $newDate = date('d/m/Y H:i', strtotime($originalDate));
-            preg_match('/media:content url="(.*)" width/', $item->asXML(), $matches);
-            $photo_url = $matches[1];
+            $media = $item->children('http://search.yahoo.com/mrss/'); // Namespace pour les éléments media
+
+            if ($media->content) {
+                $photo_url = '';
+                foreach ($media->content->attributes() as $key => $value) {
+                    if ($key == 'url') {
+                        $photo_url = (string) $value;
+                    }}}
 
             if (in_array($newDate, $testdate)) {
                 continue;

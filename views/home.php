@@ -56,7 +56,7 @@
         $fluxdefault = ['actualites', 'culture', 'pixels'];
         displayhome($fluxdefault);
     }
-
+   
     ?>
     <footer>
         <p class="mb-0 text-center">© 2023 </p>

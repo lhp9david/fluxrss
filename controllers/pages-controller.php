@@ -1,11 +1,6 @@
 <?php
 
-if (isset($_COOKIE['user']['mode'])) {
-    $mode = $_COOKIE['user']['mode'];
-}
-else {
-    $mode = 'light';
-}
+$mode = (isset($_COOKIE['user']['mode'])) ? $_COOKIE['user']['mode'] : 'light';
 
 require_once('../helpers/helpers.php');
 
